@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <title>BOOKSHELF</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+            <h3>Bookshelf Apps</h3>
+            <form id="form-search" class="form-search">
+                <input type="text" id="input-search" placeholder="Cari buku">
+                <button id="btn-search" class="btn-sm" type="submit"><span class="iconify"
+                        data-icon="mingcute:search-line"></span>
+                </button>
+            </form>
+        </div>
+    </header>
+    <main class="wrapper">
+        <div class="container">
+            <div class="content">
+
+                <div class="form">
+                    <section id="bookshelf-form" class="bookshelf-form">
+
+                        <div class="bookshelf-header">
+                            <h3 class="sect-title">Masukan Buku Baru</h3>
+                            <button id="toggle-form-add" class="toggle-form-add btn-sm"><span class="iconify"
+                                    data-icon="ep:arrow-up-bold"></span></button>
+                        </div>
+
+                        <form id="form-add" class="form-add">
+                            <div class="form-group">
+                                <label for="input-title">Judul buku</label>
+                                <input type="text" id="input-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-author">Penulis</label>
+                                <input type="text" id="input-author" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-year">Tahun terbit</label>
+                                <input type="number" id="input-year" pattern="[0-9]{4}" min="1000" max="2099" required>
+                            </div>
+
+                            <div class="check-group">
+                                <input type="checkbox" id="input-checkbox">
+                                <label for="input-checkbox">Sudah dibaca</label>
+                            </div>
+                            <button id="btn-submit" type="submit">Masukan buku</button>
+                        </form>
+
+                    </section>
+                </div>
+                <div id="bookshelf-wrapper" class="bookshelf-wrapper">
+                    <section class="bookshelf-unread">
+                        <h3 class="sect-title">Belum Selesai Dibaca</h3>
+                        <hr>
+                        <div id="unread-bookshelf" class="bookshelf">
+                        </div>
+
+                    </section>
+                    <section class="bookshelf-completed">
+                        <h3 class="sect-title">Selesai Dibaca</h3>
+                        <hr>
+                        <div id="completed-bookshelf" class="bookshelf">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="dialog"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
